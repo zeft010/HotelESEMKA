@@ -10,7 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "SELECT * FROM useraccount WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($connect, $query);
 
-    if ($result) {
         if (mysqli_num_rows($result) == 1) {
             $user_data = mysqli_fetch_assoc($result);
             $_SESSION['username'] = $username;
@@ -20,18 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: dashboard.php");
                 exit();
             } elseif ($user_data['type'] == 0) {
-                header("Location: user.php");
+                header("Location: index_registered.php");
                 exit();
             }
         } else {
             $error = "*Invalid username or password";
         }
-    } else {
-        $error = "Error: " . mysqli_error($connect);
-    }
-
-    mysqli_free_result($result);
-    mysqli_close($connect);
 }
 ?>
 

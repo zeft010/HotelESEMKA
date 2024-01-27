@@ -21,9 +21,14 @@
             <tr class="tableData">
                 <td>Id Transaksi</td>
                 <td>Id Reservasi</td>
+                <td>Nama Customer</td>
+                <td>Alamat Customer</td>
+                <td>Nomor Customer</td>
+                <td>Tipe Kamar</td>
+                <td>Tanggal Checkin</td>
+                <td>Tanggal Checkout</td>
                 <td>Total</td> 
                 <td>Payment Status</td>
-                <td>Tanggal Bayar</td>
                 <td> Aksi </td>
 
             </tr>
@@ -35,9 +40,14 @@
             <tr class="tableData">
                 <td><?php echo $f['id_transaksi'];?></td>
                 <td><?php echo $f['id_reservasi'];?></td>
+                <td><?php echo $f['nama_customer'];?></td>
+                <td><?php echo $f['alamat_customer'];?></td>
+                <td><?php echo $f['nomor_customer'];?></td>
+                <td><?php echo $f['tipe_kamar'];?></td>
+                <td><?php echo $f['tanggal_checkin'];?></td>
+                <td><?php echo $f['tanggal_checkout'];?></td>
                 <td><?php echo $f['total'];?></td>
                 <td><?php echo $f['payment_status'];?></td>
-                <td><?php echo $f['tanggal_bayar'];?></td>
                 <td>
                     <a href="delete-transaksi.php?idtrans=<?php echo $f['id_transaksi'];?>" class="actionButton">Hapus data</a>
                     <a href="edit-transaksi.php?idtrans=<?php echo $f['id_transaksi'];?>" class="actionButton">Edit</a>

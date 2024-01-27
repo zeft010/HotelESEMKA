@@ -34,7 +34,7 @@
             <td> Aksi </td>
         </tr>
         <?php 
-        include '../connect.php';
+        include 'connecthotel2.php';
         $data = mysqli_query($connect, "SELECT reservasi.id_reservasi, customer.nama_customer, customer.alamat_customer, customer.nomor_customer, reservasi.tipe_kamar, reservasi.tanggal_checkin, reservasi.tanggal_checkout, reservasi.total 
                                             FROM reservasi 
                                             JOIN customer ON reservasi.id_customer = customer.id_customer");
@@ -51,7 +51,7 @@
                 <td><?php echo $r['tanggal_checkout'];?></td>
                 <td><?php echo $r['total'];?></td>
                 <td>
-                    <a href="action-accept-reservasi.php?idrsv=<?php echo $r['id_reservasi'];?>" class="ResrvBtnAcpt">Accept</a>
+                    <a href="accept-reservasi.php?idrsv=<?php echo $r['id_reservasi'];?>" class="ResrvBtnAcpt">Accept</a>
                     <a href="delete-reservasi.php?idrsv=<?php echo $r['id_reservasi'];?>" class="ResrvBtnDecline">Decline</a>
                 </td>
             </tr>

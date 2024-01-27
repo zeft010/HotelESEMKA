@@ -16,11 +16,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Meikarta Hotel</title>
+    <title>Loremipsum Hotel</title>
 </head>
 <body>
     <nav class="navbar">
-        <div class="title"><a href="#">MeikartaHotel.</a></div>
+        <div class="title"><a href="#">LoremipsumHotel.</a></div>
         <ul>
             <li><a href="kamar/kamar.php">Kamar</a></li> 
             <li><a href="customer/customer.php">Customer</a></li> 
@@ -28,7 +28,7 @@
             <li><a href="reservasi/reservasi.php">Reservasi</a></li> 
         </ul>
         <div class="AuthBtn">
-            <a href="authentication.php">Log out</a>
+            <a href="index.php">Log out</a>
         </div>
     </nav>
     <div class="greeting">

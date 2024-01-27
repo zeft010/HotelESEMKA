@@ -1,20 +1,24 @@
 <?php
-    session_start();
-    include('connect.php');
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+session_start();
+include('connect.php');
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $check_username_query = "SELECT * FROM useraccount WHERE username = '$username'";
+    $check_username_result = mysqli_query($connect, $check_username_query);
+    if (mysqli_num_rows($check_username_result) > 0) {
+        $error = "Username already exist.";
+    } else {
         $insert_query = "INSERT INTO useraccount (username, password, type) VALUES ('$username', '$password', 0)";
         $insert_result = mysqli_query($connect, $insert_query);
 
         if ($insert_result) {
             header("Location: authentication.php");
             exit();
-        } else {
-            $error = "Error: " . mysqli_error($connect);
-        }
+        } 
     }
+}
 ?>
 
 <!DOCTYPE html>

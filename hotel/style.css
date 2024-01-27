@@ -188,6 +188,33 @@ th {
   background-color: #0056b3;
 }
 
+.ResrvBtnAcpt {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: greenyellow;
+  color: grey;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.ResrvBtnDecline {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: Red;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
 .select-container {
   position: relative;
 }

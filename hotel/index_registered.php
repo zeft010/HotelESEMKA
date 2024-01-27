@@ -16,9 +16,6 @@
                         <li><a href="#ROOMS">Rooms</a></li> 
                         <li><a href="#CONTACT">Contact</a></li> 
                     </ul>
-                <div class="loginBtn">
-                    <a href="authentication.php">Login</a>
-                </div>
             </nav>
         </header>
         <main id="HOME">  
@@ -42,19 +39,19 @@
                         <img src="https://id.marriottyogyakarta.com/resourcefiles/roomssmallimages/presidential-suite-living-room.jpg?version=11102023114352" alt="">
                         <h3>DELUXE SUITE</h3>
                         <p>Makes your sleep enak sangat also make your dream comes true with king size bed</p>
-                        <button class="book" onclick="redirectToLogin()" >Book now</button>
+                        <button class="book" onclick="redirectToBook('executive')">Book now</button>
                     </div>
                     <div class="Room">
                         <img src="https://id.marriottyogyakarta.com/resourcefiles/roomssmallimages/deluxe-twin-bed-guw.jpg?version=11102023114352" alt="">
                         <h3>PREMIER SUITE</h3>
                         <p>this is the same but different than before its not the same becaus its different</p>
-                        <button class="book" onclick="redirectToLogin()" >Book now</button>
+                        <button class="book" onclick="redirectToBook('executive')">Book now</button>
                     </div>
                     <div class="Room">
                         <img src="https://id.marriottyogyakarta.com/resourcefiles/roomssmallimages/executive-suite.jpg?version=11102023114352" alt="">
                         <h3>EXECUTIVE SUITE</h3>
                         <p>Best for Business needs to help you rest well to face tomorrow's challenge's </p>
-                        <button class="book" onclick="redirectToLogin()" >Book now</button>
+                        <button class="book" onclick="redirectToBook('executive')" >Book now</button>
                     </div>
                 </div>
             </div>
@@ -74,11 +71,8 @@
             </div>
         </main>
         <footer>
-            <div class="">©️Loremipsum Hotel 2023</div>
+            <div class="">Loremipsum Hotel 2023</div>
         </footer>
-        
-
-
     <script src="main.js"></script>
 </body>
 </html>
