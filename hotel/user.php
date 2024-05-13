@@ -8,12 +8,35 @@
 </head>
 <body id="bg">
     <div class="container booktab">
-    <center>
-    <h2 >Book Room</h2>
-    </center>    
+        <center>
+            <h2>Book Room</h2>
+        </center>    
         <form action="action_user_input_reservation.php" method="post" id="reservationForm" class="bookRoom">
-            <label for="nama">Nama:</label>
-            <input type="text" id="nama" name="nama" required>
+            <?php
+            session_start();
+            include('connect.php');
+
+            // Fetch username from session or database
+            $username = $_SESSION['username'];
+
+            // Query to fetch user's nama from database based on the username
+            $query = "SELECT username FROM useraccount WHERE username = '$username'";
+            $result = mysqli_query($connect, $query);
+
+            // Check if query was successful and user was found
+            if ($result && mysqli_num_rows($result) > 0) {
+                $row = mysqli_fetch_assoc($result);
+                $nama = $row['username'];
+
+                // Output nama field with the fetched value
+                echo '<label for="nama">Nama:</label>';
+                echo '<input type="text" id="nama" name="nama" value="' . $nama . '" readonly>';
+            } else {
+                // If user not found or query failed, display generic nama field
+                echo '<label for="nama">Nama:</label>';
+                echo '<input type="text" id="nama" name="nama" required>';
+            }
+            ?>
             <label for="alamat">Alamat:</label>
             <input type="text" id="alamat" name="alamat" required>
             <label for="nomor">Nomor:</label>

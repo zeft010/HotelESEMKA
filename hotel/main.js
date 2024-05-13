@@ -34,7 +34,7 @@ function calculateTotal() {
 }
 
 function redirectToBook(roomType) {
-  window.location.href = "user.php?room=" + roomType;
+  window.location.href = "../user.php?room=" + roomType;
 }
 function redirectToLogin(roomType) {
   window.location.href = "authentication.php?room=";

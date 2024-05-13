@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: dashboard.php");
                 exit();
             } elseif ($user_data['type'] == 0) {
-                header("Location: index_registered.php");
+                header("Location: user/index_registered.php");
                 exit();
             }
         } else {
@@ -38,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="authentication-container">
+    <a class="close_link" href="index.php">X</a>
         <h2>Login</h2>
         <?php if (isset($error)) : ?>
             <p class="error"><?php echo $error; ?></p>

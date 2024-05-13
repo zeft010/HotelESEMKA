@@ -31,6 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="authentication-container">
+    <a class="close_link" href="index.php">X</a>
+
         <h2>Registration</h2>
         <?php if (isset($error)) : ?>
             <p class="error"><?php echo $error; ?></p>
